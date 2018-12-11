@@ -2,6 +2,8 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 
+import { NgbCollapseModule } from '@ng-bootstrap/ng-bootstrap';
+
 import { LayoutComponent } from './layout.component';
 import { NavbarComponent } from './navbar/navbar.component';
 
@@ -12,7 +14,8 @@ import { NavbarComponent } from './navbar/navbar.component';
   ],
   imports: [
     CommonModule,
-    RouterModule
+    RouterModule,
+    NgbCollapseModule
   ],
   exports: [
     LayoutComponent
