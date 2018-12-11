@@ -1,6 +1,9 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 
 import { EditableLabelComponent } from './editable-label.component';
+import { ValueDisplayPipe } from './value-display.pipe';
 
 describe('EditableLabelComponent', () => {
   let component: EditableLabelComponent;
@@ -8,7 +11,9 @@ describe('EditableLabelComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ EditableLabelComponent ]
+      declarations: [ EditableLabelComponent, ValueDisplayPipe ],
+      imports: [FormsModule],
+      schemas: [CUSTOM_ELEMENTS_SCHEMA]
     })
     .compileComponents();
   }));
