@@ -1,0 +1,8 @@
+@import "src/app/app.theme.scss";
+
+nav {
+  background-color: $main-pink;
+  .nav-item {
+    cursor: pointer;
+  }
+}

@@ -1,0 +1,16 @@
+<div class="editable-label" fxLayout="row" fxLayoutAlign="start center" [class.disabled]="disabled">
+  <ng-container *ngIf="!isEdit">
+    <p>{{ value | valueDisplay : options }}</p>
+    <a class="edit-btn" (click)="isEdit = true" *ngIf="!disabled && !readonly"><i class="fa fa-pencil" aria-label="Edit"></i></a>
+  </ng-container>
+
+  <form *ngIf="isEdit" (ngSubmit)="save()">
+    <!-- normal input box -->
+    <input type="text" [(ngModel)]="value" [ngModelOptions]="{standalone: true}" *ngIf="!options?.length">
+
+    <!-- options list -->
+    <select [(ngModel)]="value" [ngModelOptions]="{standalone: true}" *ngIf="options?.length" (ngModelChange)="save()">
+      <option *ngFor="let option of options" [value]="option.value">{{ option.label }}</option>
+    </select>
+  </form>
+</div>

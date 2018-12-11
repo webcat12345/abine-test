@@ -1,0 +1,38 @@
+.contents {
+  padding: 0 80px;
+  .section-block {
+    padding: 20px 0;
+  }
+}
+
+.company-logo {
+  width: 150px;
+  height: 150px;
+  float: right;
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.comments {
+  padding: 0 80px;
+  .refresh-btn {
+    cursor: pointer;
+  }
+}
+
+.item-row {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  label {
+    flex: 0 0 140px;
+    text-align: right;
+    margin: 0;
+  }
+  p {
+    margin: 0 0 0 30px;
+  }
+}
