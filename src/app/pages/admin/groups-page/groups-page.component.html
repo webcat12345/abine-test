@@ -37,7 +37,7 @@
       </div>
     </div>
 
-    <div class="action-group" fxLayout="row" fxLayoutAlign="space-between center">
+    <div class="action-group">
       <button class="btn btn-abine">View Members</button>
       <button class="btn btn-abine">Add Members</button>
       <button class="btn btn-abine">View Reports</button>
@@ -58,8 +58,8 @@
     <button class="btn btn-abine" (click)="addComment = true" *ngIf="!addComment">Add Comment</button>
     <form [formGroup]="commentForm" (ngSubmit)="saveComment()" *ngIf="addComment">
       <div class="form-group" fxLayout="row">
-        <input class="form-control" formControlName="comment">
-        <button class="btn btn-abine">Save</button>
+        <input class="form-control" formControlName="comment" fxFlex="1 1 auto">
+        <button class="btn btn-abine" fxFlex="0 0 80px">Save</button>
       </div>
     </form>
   </div>
