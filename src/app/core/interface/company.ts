@@ -1,5 +1,5 @@
 export interface Company {
-  id: string,
+  id: string;
   manager: string;
   name: string;
   createdAt: string;

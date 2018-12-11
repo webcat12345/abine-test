@@ -9,8 +9,8 @@ export class ValueDisplayPipe implements PipeTransform {
   transform(value: any, options?: SelectOption[]): any {
 
     if (options && options.length > 0) {
-      const option = options.find(x => x.value == value);
-      return option ? option.label : value
+      const option = options.find(x => x.value.toString() === value.toString());
+      return option ? option.label : value;
     } else {
       return value;
     }

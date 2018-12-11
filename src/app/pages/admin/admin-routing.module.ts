@@ -9,17 +9,17 @@ export const routes: Routes = [
   {
     path: '', component: AdminComponent,
     children: [
-      {path: 'home', component: DummyPageComponent, data: {label: 'Home'}},
-      {path: 'groups', component: GroupsPageComponent, data: {label: 'Groups'}},
-      {path: 'users', component: DummyPageComponent, data: {label: 'Users'}},
-      {path: 'plans', component: DummyPageComponent, data: {label: 'Plans'}},
-      {path: 'orders', component: DummyPageComponent, data: {label: 'Orders'}},
-      {path: 'quantity-discounts', component: DummyPageComponent, data: {label: 'Quantity Discounts'}},
-      {path: 'coupons', component: DummyPageComponent, data: {label: 'Coupons'}},
-      {path: 'search-sites', component: DummyPageComponent, data: {label: 'Search Sites'}},
-      {path: 'site-groups', component: DummyPageComponent, data: {label: 'Site Groups'}},
-      {path: 'been-verified', component: DummyPageComponent, data: {label: 'Been Verified'}},
-      {path: 'mail-template', component: DummyPageComponent, data: {label: 'Mail Templates'}},
+      {path: 'home', component: DummyPageComponent, data: {breadcrumb: 'Home'}},
+      {path: 'groups', component: GroupsPageComponent, data: {breadcrumb: 'Groups - Name'}}, // use resolver with real integration
+      {path: 'users', component: DummyPageComponent, data: {breadcrumb: 'Users'}},
+      {path: 'plans', component: DummyPageComponent, data: {breadcrumb: 'Plans'}},
+      {path: 'orders', component: DummyPageComponent, data: {breadcrumb: 'Orders'}},
+      {path: 'quantity-discounts', component: DummyPageComponent, data: {breadcrumb: 'Quantity Discounts'}},
+      {path: 'coupons', component: DummyPageComponent, data: {breadcrumb: 'Coupons'}},
+      {path: 'search-sites', component: DummyPageComponent, data: {breadcrumb: 'Search Sites'}},
+      {path: 'site-groups', component: DummyPageComponent, data: {breadcrumb: 'Site Groups'}},
+      {path: 'been-verified', component: DummyPageComponent, data: {breadcrumb: 'Been Verified'}},
+      {path: 'mail-template', component: DummyPageComponent, data: {breadcrumb: 'Mail Templates'}},
       {path: '**', redirectTo: 'groups'}
     ]
   }
